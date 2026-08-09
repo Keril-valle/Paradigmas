@@ -43,14 +43,14 @@
 
 ## 6. Test Consolidation
 
-- [ ] 6.1 Delete the orphaned `IntegrationTest/` project
-- [ ] 6.2 Update `LibraryService.Integration.Test`: reference `LibraryService.Api`, retarget namespaces to `LibraryService.*`, bump `Microsoft.AspNetCore.Mvc.Testing` and EF InMemory/Sqlite packages to 8.x
-- [ ] 6.3 Add a login helper to the test fixture that obtains a token via `/login` (admin/1234) and attaches the bearer header (D9)
-- [ ] 6.4 Update integration tests to cover the `library-catalog` scenarios: POST books → 201/404, GET books → 200/404/401, DELETE library → 204/404
+- [x] 6.1 Delete the orphaned `IntegrationTest/` project
+- [x] 6.2 Update `LibraryService.Integration.Test`: reference `LibraryService.Api`, retarget namespaces to `LibraryService.*`, bump `Microsoft.AspNetCore.Mvc.Testing` and EF InMemory/Sqlite packages to 8.x
+- [x] 6.3 Add a login helper to the test fixture that obtains a token via `/login` (admin/1234) and attaches the bearer header (D9)
+- [x] 6.4 Update integration tests to cover the `library-catalog` scenarios: POST books → 201/404, GET books → 200/404/401, DELETE library → 204/404
 
 ## 7. Verification
 
-- [ ] 7.1 `dotnet build` clean across the solution
-- [ ] 7.2 `dotnet test` green (SQLite in-memory, no live DB required)
-- [ ] 7.3 Grep confirms no remaining `HackerRank1` namespace/assembly references
-- [ ] 7.4 `openspec validate --change refactor-clean-architecture` passes
+- [x] 7.1 `dotnet build` clean across the solution
+- [x] 7.2 `dotnet test` green (SQLite in-memory, no live DB required)
+- [x] 7.3 Grep confirms no remaining `HackerRank1` namespace/assembly references
+- [x] 7.4 `openspec validate --change refactor-clean-architecture` passes
