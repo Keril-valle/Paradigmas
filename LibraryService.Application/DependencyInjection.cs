@@ -1,0 +1,17 @@
+using LibraryService.Application.Authentication;
+using LibraryService.Application.Services;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace LibraryService.Application;
+
+public static class DependencyInjection
+{
+    public static IServiceCollection AddApplication(this IServiceCollection services)
+    {
+        services.AddScoped<IAuthenticationService, AuthenticationService>();
+        services.AddScoped<ILibrariesService, LibrariesService>();
+        services.AddScoped<IBooksService, BooksService>();
+
+        return services;
+    }
+}
