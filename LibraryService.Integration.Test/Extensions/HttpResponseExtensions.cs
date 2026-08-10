@@ -9,7 +9,7 @@ namespace LibraryService.Tests.Extensions
         public static async Task<T> ReadBody<T>(this HttpResponseMessage response)
         {
             var content = await response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<T>(content);
+            return JsonConvert.DeserializeObject<T>(content)!;
         }
     }
 }
